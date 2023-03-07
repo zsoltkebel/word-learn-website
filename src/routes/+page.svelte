@@ -1,7 +1,7 @@
 <script>
 	import { onSnapshot, collection } from 'firebase/firestore';
 	import { db } from '../lib/firebaseConfig';
-	import Word from './components/word.svelte';
+	import WordItem from './components/WordItem.svelte';
 
 	/** @type {import('firebase/firestore').DocumentSnapshot[]} */
 	let words = [];
@@ -12,8 +12,13 @@
 	});
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-{#each words as word}
-	<Word docSnap={word} />
-{/each}
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="hero min-h-screen bg-base-200" style="background-image: url(/IMG_9923.png);">
+	<div class="hero-overlay bg-opacity-70"></div>
+	<div class="hero-content text-center">
+		<div class="max-w-md">
+			<p>Welcome to</p>
+			<h1 class="text-5xl font-bold py-6">Word Learn</h1>
+			<a href="/decks" class="btn btn-primary">View Decks</a>
+		</div>
+	</div>
+</div>

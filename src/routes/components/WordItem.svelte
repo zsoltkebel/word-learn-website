@@ -8,8 +8,8 @@
 {#if data}
 	<div class="card bg-base-100 shadow-xl m-2">
 		<div class="card-body">
-			<h1>{data.word}</h1>
-			<h2>{data.translation}</h2>
+			<h1>{data["text-1"]}</h1>
+			<h2>{data["text-2"]}</h2>
 		</div>
 	</div>
 {/if}
